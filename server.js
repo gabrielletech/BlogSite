@@ -67,18 +67,19 @@ app.use('/blogs', blogsRouter);
 const Users = require('./routes/Users');
 app.use('/users', Users)
 
+//Build script for Heroku
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+  
+    app.get("*", (req, res) => {
+      res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    });
+}
+
 //connect to database
 mongoose.connect(process.env.URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Çonnected to MongoDB'))
     .catch(err => console.log(err));
-
-    if (process.env.NODE_ENV === "production") {
-        app.use(express.static("client/build"));
-      
-        app.get("*", (req, res) => {
-          res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-        });
-      }
 
 //port setup
 const PORT = process.env.PORT;
