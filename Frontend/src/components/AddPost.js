@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const AddPost = () => {
     const [title, setTitle] = useState('');
@@ -69,6 +70,7 @@ const AddPost = () => {
                     </div>
                     <button type="submit" className="btn btn-primary">Add Post</button>
                 </form>
+                <Link to="/blogs" className="btn">Back </Link> 
             </div>
         </add>
         </>

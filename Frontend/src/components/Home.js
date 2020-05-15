@@ -20,7 +20,7 @@ const Blogs = ({ posts }) => {
                 </Link>
               <p>{post.post}
                 </p>
-              <span><Badge color="tan">{post.author}</Badge></span>
+              <span><Badge color="tan">{post.author}</Badge></span><hr></hr>
             </div>
           )))}
       </Post>
@@ -31,5 +31,5 @@ const Blogs = ({ posts }) => {
 export default Blogs;
 
 const Post = styled.div`
-      margin: 7rem 0;
+      margin: 5rem 0;
 `;

@@ -7,8 +7,7 @@ import Spinner from '../spinner.gif';
 import { Route, Link } from 'react-router-dom';
 import AddPost from './AddPost';
 import EditPost from './EditPost';
-import axios from 'axios'
-import Login from './Login';
+import axios from 'axios';
 
 const Dashboard = ({posts}) => {
     const [post, setPost] = useState([]);
@@ -22,7 +21,7 @@ const Dashboard = ({posts}) => {
     return (
         <>
             <Post>
-            <Link to='/AddPost' className="btn add">Add Post</Link>
+            <Link to='/AddPost' style={{ background: 'tan', marginLeft: 600}}className="btn">Add Post</Link><br></br>
                 {!posts.length ? (
                 <img style={{width: '10rem', display: 'block', margin: 'auto'}} src={Spinner} alt="loading..." />) : (
                 posts.map((post, key) => (
@@ -42,7 +41,7 @@ const Dashboard = ({posts}) => {
                     </div>
                 )))}
             </Post>
-            <Route path="/AddPost" component={AddPost}/>
+            <Route path="/addPost" component={AddPost}/>
             <Route path="/update/:id" render={props => <EditPost {...props} posts={posts}/>} />
             
         </>

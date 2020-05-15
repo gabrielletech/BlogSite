@@ -1,11 +1,43 @@
 .heading {
   text-align: center;
-  font-family: 'Cedarville Cursive', cursive;
+  font-family: 'Dancing Script', cursive;
+  font-size: 34pt;
+}
+
+.subheading {
+  text-align: center;
+  font-size: 12pt;
+}
+
+.carousel-item .img-fluid {
+   width: 100%;
+   height: 100%;
+   display: block;
+   margin: auto;
+}
+
+.styling {
+  margin: 2rem auto;
+  padding: 1rem 10rem;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.wide {
+  width: 450px;
+  display: block;
+  margin: auto;
 }
 
 #page-wrap {
   text-align: center;
   overflow: auto;
+}
+
+form {
+  width: 50%
 }
 
 .btn {

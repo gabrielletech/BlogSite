@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const EditPost = (props) => {
     const [title, setTitle] = useState('');
@@ -80,7 +81,8 @@ const EditPost = (props) => {
                         />  
                     </div>
                     <button type="submit" className="btn btn-primary">Post</button>
-                </form>
+                </form><br></br>
+                <Link to="/blogs" className="btn">Back </Link> 
             </div>
         </add>
         </>

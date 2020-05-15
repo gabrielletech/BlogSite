@@ -9,16 +9,20 @@ export default props => {
                 Home
             </Link>
 
-            <Link to="/About" className="menu-item">
+            <Link to="/about" className="menu-item">
                 About
             </Link>
 
-            <Link to="/Contact" className="menu-item">
+            <Link to="/contact" className="menu-item">
                 Contact
             </Link>
 
-            <Link to="/Login" className="menu-item">
-                Login/Logout
+            <Link to="/homestyling" className="menu-item">
+                Homestyling
+            </Link>
+
+            <Link to="/googleLogin" className="menu-item">
+                Dashboard
             </Link>
         </Menu>
   );
