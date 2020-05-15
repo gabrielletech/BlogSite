@@ -9,6 +9,9 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const User = require('./models/user.model');
 
+const fetch = require('node-fetch');
+const path = require("path");
+
 const app = express();
 app.use(cors());
 app.use(helmet());
