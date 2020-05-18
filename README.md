@@ -38,5 +38,3 @@ https://byvblogs.herokuapp.com/
 ## License
 [ISC](https://www.isc.org/licenses/)
 
-## Preview
-![screenshot](/images/app.jpg)
