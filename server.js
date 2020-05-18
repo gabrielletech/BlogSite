@@ -9,7 +9,6 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const User = require('./models/user.model');
 
-const fetch = require('node-fetch');
 const path = require("path");
 
 const app = express();
@@ -71,13 +70,13 @@ const Users = require('./routes/Users');
 app.use('/users', Users)
 
 //Build script for Heroku
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("Frontend/build"));
+
+app.use(express.static("Frontend/build"));
   
-    app.get("*", (req, res) => {
-      res.sendFile(path.resolve(__dirname, "Frontend", "build", "index.html"));
-    });
-}
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "Frontend", "build", "index.html"));
+});
+
 
 //connect to database
 mongoose.connect(process.env.URI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -85,5 +84,5 @@ mongoose.connect(process.env.URI, { useNewUrlParser: true, useUnifiedTopology: t
     .catch(err => console.log(err));
 
 //port setup
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
