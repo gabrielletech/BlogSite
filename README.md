@@ -32,7 +32,11 @@ Helmet is installed to ensure the security of the application
 
 ## Deployment
 
-App is deployed to heroku
+App is deployed to heroku:
+https://byvblogs.herokuapp.com/
 
 ## License
 [ISC](https://www.isc.org/licenses/)
+
+## Preview
+![screenshot](/images/app.jpg)
