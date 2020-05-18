@@ -72,10 +72,10 @@ app.use('/users', Users)
 
 //Build script for Heroku
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
+    app.use(express.static("Frontend/build"));
   
     app.get("*", (req, res) => {
-      res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+      res.sendFile(path.resolve(__dirname, "Frontend", "build", "index.html"));
     });
 }
 
@@ -85,5 +85,5 @@ mongoose.connect(process.env.URI, { useNewUrlParser: true, useUnifiedTopology: t
     .catch(err => console.log(err));
 
 //port setup
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
