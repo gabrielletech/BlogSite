@@ -22,7 +22,9 @@
 }
 
 .welcome {
-  text-align: center;
+  text-decoration: underline;
+  margin: 3rem auto;
+  padding: 0.5rem 10rem;
 }
 
 .wide {
@@ -111,4 +113,52 @@ form {
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Page */
+.lead-title {
+  color: tan;
+}
+
+.contact-icon {
+  font-size: 35px;
+  border-bottom: 1px solid #000;
+}
+
+.contact-link {
+  color: #000;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-link:hover {
+  color: #000;
+  text-decoration: none;
+  
+}
+
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }

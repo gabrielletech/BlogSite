@@ -7,6 +7,7 @@ const Footer = () => {
             <span style={{color: '#d2b48c', top: '1.5rem', left: '1rem', position: 'relative', textAlign: 'center'}}>
             &copy;{new Date().getFullYear()} All Rights Reserved
             </span>
+           
         </footer>
     );
 };

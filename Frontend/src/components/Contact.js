@@ -8,13 +8,38 @@ export class Contact extends Component {
   render() {
     return (
       <Post>
-        <h1>Contact: </h1>
-        <p><MdEmail /> Email: veemavingire@gmail.com. </p>
-        <p><FaLinkedin /> LinkedIn: https://www.linkedin.com/in/vongai-mavingire-a61b6558/</p>
-        <p><FaYoutube /> YouTube: https://www.youtube.com/channel/UCxonCbqcCgJ4DqyjWXmYcdg</p>
-        <p><FaInstagram /> Instagram: https://www.instagram.com/vongai.mapho</p>
-        <p><FaFacebook /> FaceBook: https://www.facebook.com/vongaimaphoo/</p>
-        <p><FaTwitter /> Twitter: https://twitter.com/vongaimapho</p>
+        <h1 className="lead-title">Get In Touch With Me </h1>
+          <div className="container">
+            <div className="row">
+              <div className="col-3">
+                <p className="contact-icon mt-3 mb-2">
+                  <a className="hvr-grow contact-link" href="veemavingire@gmail.com" mailto="veemavingire@gmail.com."><MdEmail /> Email </a> </p>
+              </div>
+              <div className="col-3">
+              <p className="contact-icon mt-3 mb-2">
+                 <a className="hvr-grow contact-link" href="https://www.linkedin.com/in/vongai-mavingire-a61b6558/"><FaLinkedin /> LinkedIn</a></p>
+              </div>
+              <div className="col-3">
+              <p className="contact-icon mt-3 mb-2">
+                 <a className="hvr-grow contact-link" href="https://www.youtube.com/channel/UCxonCbqcCgJ4DqyjWXmYcdg"><FaYoutube /> YouTube</a></p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-3">
+                <p className="contact-icon mt-3 mb-2">
+                  <a className="hvr-grow contact-link" href="https://www.instagram.com/vongai.mapho"><FaInstagram /> Instagram</a></p>
+              </div>
+              <div className="col-3">
+              <p className="contact-icon mt-3 mb-2">
+                 <a className="hvr-grow contact-link" href="https://www.facebook.com/vongaimaphoo/"><FaFacebook /> FaceBook</a> </p>
+              </div>
+              <div className="col-3">
+              <p className="contact-icon mt-3 mb-2">
+                <a className="hvr-grow contact-link" href="https://twitter.com/vongaimapho"><FaTwitter /> Twitter</a>  </p>
+              </div>
+            </div>
+          </div>
+        
         <br />
         <Link to="/" className="btn">Back to home page</Link> 
       </Post>
